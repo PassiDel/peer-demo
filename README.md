@@ -3,6 +3,9 @@ Express + socket.io + peerjs
 
 ## Installation
 ```sh
+git clone git@github.com:PassiDel/peer-demo.git
+cd peer-demo/
+
 cp .env.example .env
 npm install
 ```
