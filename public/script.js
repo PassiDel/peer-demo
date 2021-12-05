@@ -26,6 +26,9 @@ myPeer.on('open', id => {
             call.on('stream', userVideoStream => {
                 addVideoStream(video, userVideoStream)
             })
+            call.on('close', () => {
+                video.remove()
+            })
         })
 
         socket.on('user-connected', userId => {
