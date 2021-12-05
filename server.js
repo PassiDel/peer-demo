@@ -25,7 +25,6 @@ app.get('/:room', (req, res) => {
 })
 
 io.on('connection', socket => {
-    socket.emit('peer-port', PEER_PORT)
     socket.on('join-room', (roomId, userId) => {
         socket.join(roomId)
         socket.to(roomId).emit('user-connected', userId)
